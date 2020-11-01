@@ -7,7 +7,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html --no-source-maps --public-url /last-update/ -d docs"
+    "build": "parcel build index.html --no-source-maps",
+    "build:github": "yarn build --public-url /last-update/ -d docs",
+    "postbuild": "NODE_ENV=production node generate-sw",
+    "postbuild:github": "OUT_DIR=docs yarn postbuild"
   },
   "alias": {
     "react": "preact/compat",
@@ -29,13 +32,15 @@
     "@babel/core": "^7.12.3",
     "@babel/plugin-transform-react-jsx": "^7.12.1",
     "parcel-bundler": "^1.12.4",
-    "preact-material-components": "^1.6.1"
+    "workbox-build": "^5.1.4",
+    "workbox-expiration": "^5.1.4",
+    "workbox-precaching": "^5.1.4",
+    "workbox-routing": "^5.1.4",
+    "workbox-strategies": "^5.1.4"
   },
   "dependencies": {
     "idb": "^5.0.7",
     "preact": "^10.5.5",
-    "react": ">= 16.8.0",
-    "react-dom": ">= 16.8.0",
-    "react-is": ">= 16.8.0"
+    "preact-material-components": "^1.6.1"
   }
 }
