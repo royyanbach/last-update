@@ -1,0 +1,22 @@
+{
+  "short_name": "Last Update",
+  "name": "Last Update App",
+  "description": "Keep track of last update",
+  "icons": [
+    {
+      "src": "public/logo-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "public/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#6200ee",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#6200ee"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "last-update",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:royyanbach/last-update.git",
+  "author": "royyanbach <royyan.bachtiar@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --no-source-maps --public-url /last-update/ -d docs"
+  },
+  "alias": {
+    "react": "preact/compat",
+    "react-dom/test-utils": "preact/test-utils",
+    "react-dom": "preact/compat"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "@babel/plugin-transform-react-jsx",
+        {
+          "pragma": "h",
+          "pragmaFrag": "Fragment"
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-react-jsx": "^7.12.1",
+    "parcel-bundler": "^1.12.4",
+    "preact-material-components": "^1.6.1"
+  },
+  "dependencies": {
+    "idb": "^5.0.7",
+    "preact": "^10.5.5",
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0",
+    "react-is": ">= 16.8.0"
+  }
+}
